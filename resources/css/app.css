@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.news-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .news-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .news-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.news-item {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content ol,
+.content ul {
+    padding-left: 20px;
+    margin-bottom: 1em;
+}
+
+.content ol {
+    list-style-type: decimal;
+}
+
+.content ul {
+    list-style-type: disc;
+}
+
+.content li {
+    margin-bottom: 0.5em;
+}
+
+.excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
