@@ -472,9 +472,9 @@
                                 @foreach($testimonials as $testimonial)
                                     {
                                         id: {{ $testimonial->id }},
-                                        photo: '{{ $testimonial->image ? asset('storage/' . $testimonial->image) : ($testimonial->photo ? asset('storage/' . $testimonial->photo) : asset('assets/img/default-avatar.png')) }}',
+                                        photo: '{{ $testimonial->image ? asset('storage/' . $testimonial->image) : ($testimonial->photo ? asset('storage/' . $testimonial->photo) : asset('img/default-avatar.png')) }}',
                                         name: `{{ $testimonial->name }}`,
-                                        title: `{{ trim(($testimonial->position ? $testimonial->position : '') . (($testimonial->position && $testimonial->company) ? ' · ' : '') . ($testimonial->company ? $testimonial->company : '')) }}`,
+                                        title: `{{ trim(($testimonial->position ? $testimonial->position : '') . (($testimonial->position && $testimonial->company) ? ' ? ' : '') . ($testimonial->company ? $testimonial->company : '')) }}`,
                                         description: `{!! 
                                             str_replace("`", "'", 
                                                 preg_replace('/\s+/', ' ', e(strip_tags($testimonial->content ?: $testimonial->description ?: ''))) 
@@ -544,7 +544,7 @@
                                                     <p class="text-sm sm:text-base font-medium text-[#4D607D] mb-3" x-text="slide.title"></p>
                                                     <p class="text-[#4D607D] text-xs sm:text-sm leading-relaxed mb-4 line-clamp-4" x-text="slide.description"></p>
                                                     <div class="flex justify-end">
-                                                        <button class="bg-[#C4D25A] text-[#1F4894] font-semibold rounded-lg hover:bg-[#e5f573] transition duration-300 px-4 py-2 text-xs sm:text-sm">Read More →</button>
+                                                        <button class="bg-[#C4D25A] text-[#1F4894] font-semibold rounded-lg hover:bg-[#e5f573] transition duration-300 px-4 py-2 text-xs sm:text-sm">Read More ?</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -581,18 +581,18 @@
         <div class="bg-[#F8FBFB] w-full h-max pb-20">
             <div class="pt-16">
                 <div class="flex">
-                    <img src="./img/Instagram.png" class="w-[41px] h-[41px] ml-auto mr-2 mt-1">
+                    <img src="{{ asset('img/Instagram.png') }}" alt="Instagram icon" class="w-[41px] h-[41px] ml-auto mr-2 mt-1">
                     <p class="text-[#1F4894] text-[36px] font-semibold mr-auto w-fit ml-2">Instagram</p>
                 </div>
                 <div class="h-1 w-36 bg-[#C4D25A] mt-2 m-auto"></div>
             </div>
             <div class="flex flex-col sm:flex-row max-sm:items-center max-sm:justify-center">
                 <div class="w-full m-20">
-                    <img src="./img/ig-mockup.png">
+                    <img src="{{ asset('img/ig-mockup.png') }}" alt="Instagram mockup">
                 </div>
                 <div class="w-full flex flex-col items-center justify-center max-sm:mb-12">
                     <p class="font-semibold text-xl sm:text-base md:text-xl md:m-4">Follow us on :</p>
-                    <a href="https://instagram.com/univpertamina_io" class="text-[#1F4894] md:m- 4 rounded-md text-2xl sm:text-lg md:text-2xl font-bold py-3 px-12 sm:py-1 sm:px-6 md:py-3 md:px-12 bg-[#c4d25a] hover:bg-[#dbe885] transition duration-500">@univpertamina_io</a>
+                    <a href="https://instagram.com/univpertamina_io" class="text-[#1F4894] md:m-4 rounded-md text-2xl sm:text-lg md:text-2xl font-bold py-3 px-12 sm:py-1 sm:px-6 md:py-3 md:px-12 bg-[#c4d25a] hover:bg-[#dbe885] transition duration-500">@univpertamina_io</a>
                 </div>
             </div>
             <div>
@@ -602,7 +602,7 @@
                 <div class="w-2/3 ">
                     <iframe
                     src="https://www.youtube.com/embed/rvB5LsROYbQ"
-                    class="w-full h- rounded-xl"
+                    class="w-full h-[450px] rounded-xl"
                     width="575" height="450"
                     title="Universitas Pertamina Profile Video"
                     frameborder="0"
