@@ -67,7 +67,8 @@ class HomeController extends Controller
             $highlightedNews = collect([
                 (object)[
                     'id' => 0,
-                    'cover' => 'assets/img/1.png', 
+                    'cover' => null,
+                    'image' => null,
                     'title' => 'Default News Title',
                     'content' => 'This is a default news content. No highlighted news available at the moment.',
                 ]

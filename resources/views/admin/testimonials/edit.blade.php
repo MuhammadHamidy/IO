@@ -56,7 +56,7 @@
                 </div>
                 <div class="flex items-center space-x-4">
                     @php
-                        $img = $testimonial->image ? asset('storage/' . $testimonial->image) : ($testimonial->photo ? asset('storage/' . $testimonial->photo) : asset('assets/img/default-avatar.png'));
+                        $img = $testimonial->image ? asset('storage/' . $testimonial->image) : ($testimonial->photo ? asset('storage/' . $testimonial->photo) : asset('img/default-avatar.png'));
                     @endphp
                     <img src="{{ $img }}" class="w-24 h-24 object-cover rounded-md border" alt="Current image">
                     <span class="text-sm text-gray-600">Current image</span>
